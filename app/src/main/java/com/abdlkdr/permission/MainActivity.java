@@ -3,6 +3,8 @@ package com.abdlkdr.permission;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -17,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     setContentView(R.layout.activity_main);
     permissionButton = findViewById(R.id.permission_button);
     permissionButton.setOnClickListener(buttonClickListener);
+    permissionButton.setTextColor(Color.WHITE);
   }
 
   private final OnClickListener buttonClickListener = view -> Permissions.with(MainActivity.this)
